@@ -10,7 +10,6 @@
 
 function [downsampled_im] = kcrop(im, crop_factor)
 
-
 n = crop_factor;
     
 im_k = center_crop(fftshift(fftn(im)), n);

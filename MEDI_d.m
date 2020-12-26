@@ -73,7 +73,7 @@ end
 m = dataterm_mask(data_weighting_mode, tempn, Mask);
 b0 = m.*exp(1i*RDF);
 wG = gradient_mask(gradient_weighting_mode, iMag, Mask, grad, voxel_size, percentage);
-[wG_ds, Mask_ds] = gradient_mask_downsample_b(gradient_weighting_mode, iMag, Mask, grad, voxel_size, percentage, crop_factor);
+[wG_ds, Mask_ds] = gradient_mask_ds(gradient_weighting_mode, iMag, Mask, grad, voxel_size, percentage, crop_factor);
 
 % Downsampling regularization
 flag_DS = ~isempty(lam_Downsample);

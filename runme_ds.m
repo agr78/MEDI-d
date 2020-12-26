@@ -49,7 +49,7 @@ save RDF.mat RDF iFreq iFreq_raw iMag N_std Mask matrix_size...
 % Run MEDI 
 clc
 
-QSM_ds = MEDI_d('filename', 'RDF.mat','lambda', 1000, 'merit', 'lam_Downsample', 1000, 'crop_factor', 4);
+QSM_ds = MEDI_d('filename', 'RDF.mat','lambda', 1000, 'merit', 'lam_Downsample', 1000, 'crop_factor', 3);
 % Save to DICOM, ignore warnings...
 Write_DICOM(QSM_ds,files,'QSM')
 
