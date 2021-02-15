@@ -37,7 +37,7 @@
 %   Last modified by Zhe Liu on 2017.11.06
 %   Last modified by Alexandra Roberts on 2020.12.23
 
-function [x, cost_reg_history, cost_data_history, wG, resultsfile] = MEDI_L1_d(varargin)
+function [x, dxp, cost_reg_history, cost_data_history, wG, resultsfile] = MEDI_L1_d(varargin)
 
 [lambda, ~, RDF, N_std, iMag, Mask, matrix_size, matrix_size0, voxel_size, ...
     delta_TE, CF, B0_dir, merit, smv, radius, data_weighting, gradient_weighting, ...
@@ -138,6 +138,7 @@ end
             
             
             dx = real(cgsolve(A, -b, cg_tol, cg_max_iter, 0));
+            
             res_norm_ratio = norm(dx(:))/norm(x(:));
             x = x + dx;
             if iter == 3
@@ -145,6 +146,8 @@ end
             end
             wres = m.*exp(1i*(real(ifftn(D.*fftn(x))))) - b0;
             
+            x_i(:,:,:,iter) = x;
+            dx_i(:,:,:,iter) = dx;
             cost_data_history(iter) = norm(wres(:),2);
             cost = abs(wG.*grad(x));
             cost_reg_history(iter) = sum(cost(:));
@@ -170,6 +173,8 @@ end
             toc
             
             assignin('base','wG',wG)
+            assignin('base','x_i',x_i)
+            assignin('base','dx_i',dx_i)
         end
         
         

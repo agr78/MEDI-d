@@ -6,7 +6,7 @@ clc;
 MEDI_set_path
 
 % STEP 1: Import data
-[iField, voxel_size, matrix_size, CF,delta_TE, TE, B0_dir, files]=Read_DICOM('AXL_QSM');
+[iField, voxel_size, matrix_size, CF,delta_TE, TE, B0_dir, files]=Read_DICOM('C:\Users\alexa\Documents\Magnetic Resonance Imaging\Code\Data\MEDI-d\AXL_QSM');
 
 % Generate the magnitude image 
 iMag = squeeze(sqrt(sum(abs(iField).^2,4)));
@@ -49,11 +49,13 @@ save RDF.mat RDF iFreq iFreq_raw iMag N_std Mask matrix_size...
 % Run MEDI 
 clc
 
-QSM_ds = MEDI_d('filename', 'RDF.mat','lambda', 1000, 'merit', 'lam_Downsample', 1000, 'crop_factor', 3);
+QSM_ds = MEDI_d('filename', 'RDF.mat','lambda', 1000, 'merit', 'lam_Downsample', 200, 'crop_factor', 2);
 % Save to DICOM, ignore warnings...
 Write_DICOM(QSM_ds,files,'QSM')
 
 vis(QSM_ds)
-Data = sprintf('GE_MEDI_d_%s.mat', datestr(now,'mm-dd-yyyy HH-MM'))
-
+%Data = sprintf('GE_MEDI_d_%s.mat', datestr(now,'mm-dd-yyyy HH-MM'))
+%%
+QSM_RDF = MEDI_RDF('filename', 'RDF.mat','lambda', 1000, 'merit');
+QSM = MEDI_L1('filename', 'RDF.mat','lambda', 1000, 'merit');
 
