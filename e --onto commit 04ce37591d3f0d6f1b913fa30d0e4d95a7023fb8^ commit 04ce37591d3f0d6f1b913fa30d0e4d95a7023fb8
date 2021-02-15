@@ -1,0 +1,51 @@
+[33mcommit e12a6d0c9314af377459298fc359df6fa48e9ed3[m[33m ([m[1;36mHEAD -> [m[1;32mwavelet_regularization[m[33m)[m
+Author: agr78 <69256818+agr78@users.noreply.github.com>
+Date:   Mon Feb 15 12:32:49 2021 -0500
+
+    Added wavelet decomposition array function
+
+[33mcommit 045695a77f83170c2a0f8baec3313e6c33d73bad[m[33m ([m[1;31morigin/wavelet_regularization[m[33m)[m
+Author: agr78 <69256818+agr78@users.noreply.github.com>
+Date:   Mon Feb 15 12:23:53 2021 -0500
+
+    Implemented wavelet regularization cost function
+
+[33mcommit 707d1629bcdc03d9d16a75a1c8e193435535a3c0[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: agr78 <69256818+agr78@users.noreply.github.com>
+Date:   Mon Feb 15 12:09:24 2021 -0500
+
+    Revert "Implemented wavelet regularization cost function."
+    
+    This reverts commit 04ce37591d3f0d6f1b913fa30d0e4d95a7023fb8.
+
+[33mcommit 04ce37591d3f0d6f1b913fa30d0e4d95a7023fb8[m
+Author: ali <ali@WANGLAB-GPU2>
+Date:   Mon Feb 15 11:58:50 2021 -0500
+
+    Implemented wavelet regularization cost function.
+
+[33mcommit 664ff6201dfcbbcf68057e0c6686958ae6b9f759[m
+Author: agr78 <69256818+agr78@users.noreply.github.com>
+Date:   Mon Jan 11 15:01:23 2021 -0500
+
+    Removed DICOM and binary files.
+
+[33mcommit 55d88172a87c7e648939e161a297b45c62c2f79b[m
+Author: agr78 <69256818+agr78@users.noreply.github.com>
+Date:   Sat Dec 26 15:25:01 2020 -0500
+
+    Updated gradient_mask_ds
+
+[33mcommit 3f93743ea4f1c4bb97dd3ef4b62c53501e24a270[m
+Author: agr78 <69256818+agr78@users.noreply.github.com>
+Date:   Sat Dec 26 14:49:57 2020 -0500
+
+    Initial upload
+    
+    Includes data, run file, and supporting functions for MEDI-d. Does not include the base MEDI toolbox.
+
+[33mcommit 32afff51f373b88d149ccfcc2c4273c8916fabc5[m
+Author: agr78 <69256818+agr78@users.noreply.github.com>
+Date:   Wed Dec 23 11:23:14 2020 -0500
+
+    Initial commit
