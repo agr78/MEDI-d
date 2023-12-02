@@ -1,4 +1,3 @@
-# MEDI-d
 This is an archived repository corresponding to the ISMRM conference papers:
 
 > A. Roberts et. al, "[MEDI-d: Downsampled Morphological Priors for Shadow Reduction in Quantitative Susceptibility Mapping](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=zH_SGikAAAAJ&citation_for_view=zH_SGikAAAAJ:UeHWp8X0CEIC)", presented at the International Society for Magnetic Resonance in Medicine, Vancouver, Canada, 2021.
